@@ -84,12 +84,12 @@ const projects = [
 			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 				{projects.map((project, index) => (
 					<article class="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden transition-transform hover:scale-[1.02] duration-300">
-						<div class="relative bg-gray-100 dark:bg-gray-700" style="height: 300px;">
+						<div class="relative pt-[56.25%] bg-gray-100 dark:bg-gray-700">
 							<img 
 								src={project.image}
 								onerror={`console.error('Failed to load image:', this.src); this.onerror=null; this.src='${project.fallbackImage}'`}
 								alt={`${project.title} - Project Screenshot`}
-								class="absolute inset-0 w-full h-full object-cover"
+								class="absolute inset-0 w-full h-full object-contain bg-gray-100 dark:bg-gray-700"
 								loading={index === 0 ? "eager" : "lazy"}
 								decoding="async"
 								onload="console.log('Image loaded successfully:', this.src)"
