@@ -1,12 +1,34 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
+interface TechColor {
+	bg: string;
+	text: string;
+}
+
+interface TechColors {
+	[key: string]: TechColor;
+}
+
+interface Project {
+	title: string;
+	description: string;
+	image: string;
+	fallbackImage: string;
+	technologies: string[];
+	techColors: TechColors;
+	links: {
+		github: string;
+		live: string;
+	};
+}
+
 const pageTitle = "Josh Winningham - Full Stack Developer";
 const pageDescription = "Full Stack Developer specializing in Python, JavaScript, and modern web technologies. Check out my latest projects and get in touch.";
 const ogImage = "/images/og-image.png";
 
 // Project data
-const projects = [
+const projects: Project[] = [
 	{
 		title: "Miles & Steps Tracker",
 		description: "A modern web application for tracking daily walking/running activities. Features include miles tracking, automatic steps calculation, calorie monitoring, and weight tracking. Built with Astro, TypeScript, and Chart.js for interactive data visualization.",
