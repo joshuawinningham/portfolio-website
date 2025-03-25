@@ -105,7 +105,7 @@ const projects: Project[] = [
 				Josh Winningham
 			</h1>
 			<p class="text-xl md:text-2xl mb-8 max-w-2xl text-gray-700 dark:text-gray-50">
-				Full Stack Developer passionate about creating elegant solutions with Python, JavaScript, and modern web technologies.
+				Full Stack Developer specializing in modern web technologies. Experienced in building responsive applications with Astro, React, Python, and TypeScript.
 			</p>
 			<div class="flex gap-4">
 				<a href="#projects" class="bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg transition-colors">
@@ -122,7 +122,7 @@ const projects: Project[] = [
 			<h2 class="text-3xl md:text-4xl font-bold mb-12 text-center bg-gradient-to-r from-purple-400 to-blue-400 text-transparent bg-clip-text">Featured Projects</h2>
 			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 				{projects.map((project, index) => (
-					<article class="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden transition-transform hover:scale-[1.02] duration-300">
+					<article class="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden transition-transform hover:scale-[1.02] duration-300 flex flex-col">
 						<div class="relative pt-[56.25%] bg-gray-100 dark:bg-gray-700">
 							<img 
 								src={project.image}
@@ -134,42 +134,44 @@ const projects: Project[] = [
 								onload="console.log('Image loaded successfully:', this.src)"
 							/>
 						</div>
-						<div class="p-6">
-							<h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-2">{project.title}</h3>
-							<p class="text-gray-700 dark:text-gray-100 mb-4">
+						<div class="p-6 flex flex-col flex-grow">
+							<h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-3">{project.title}</h3>
+							<p class="text-gray-700 dark:text-gray-100 mb-6 flex-grow">
 								{project.description}
 							</p>
-							<div class="flex flex-wrap gap-2 mb-4">
-								{project.technologies.map(tech => (
-									<span class={`px-3 py-1 ${project.techColors[tech].bg} ${project.techColors[tech].text} rounded-full text-sm`}>
-										{tech}
-									</span>
-								))}
-							</div>
-							{project.links && (
-								<div class="flex gap-4">
-									{project.links.github && (
-										<a 
-											href={project.links.github}
-											target="_blank"
-											rel="noopener noreferrer"
-											class="text-gray-700 hover:text-gray-900 dark:text-gray-100 dark:hover:text-white transition-colors"
-										>
-											GitHub →
-										</a>
-									)}
-									{project.links.live && (
-										<a 
-											href={project.links.live}
-											target="_blank"
-											rel="noopener noreferrer"
-											class="text-blue-600 hover:text-blue-700 dark:text-blue-300 dark:hover:text-blue-200 transition-colors"
-										>
-											Live Demo →
-										</a>
-									)}
+							<div class="space-y-4">
+								<div class="flex flex-wrap gap-2">
+									{project.technologies.map(tech => (
+										<span class={`px-3 py-1 ${project.techColors[tech].bg} ${project.techColors[tech].text} rounded-full text-sm`}>
+											{tech}
+										</span>
+									))}
 								</div>
-							)}
+								{project.links && (
+									<div class="flex gap-4 pt-2">
+										{project.links.github && (
+											<a 
+												href={project.links.github}
+												target="_blank"
+												rel="noopener noreferrer"
+												class="text-gray-700 hover:text-gray-900 dark:text-gray-100 dark:hover:text-white transition-colors"
+											>
+												GitHub →
+											</a>
+										)}
+										{project.links.live && (
+											<a 
+												href={project.links.live}
+												target="_blank"
+												rel="noopener noreferrer"
+												class="text-blue-600 hover:text-blue-700 dark:text-blue-300 dark:hover:text-blue-200 transition-colors"
+											>
+												Live Demo →
+											</a>
+										)}
+									</div>
+								)}
+							</div>
 						</div>
 					</article>
 				))}
@@ -186,7 +188,7 @@ const projects: Project[] = [
 				<div class="mb-8">
 					<h3 class="text-xl font-semibold mb-6 text-gray-800 dark:text-white">Technical Skills</h3>
 					<div class="flex flex-wrap gap-3">
-						{['Python', 'JavaScript', 'React', 'Flask', 'Tailwind CSS', 'HTML/CSS', 'Git', 'SQL'].map((skill) => (
+						{['TypeScript', 'Python', 'Astro', 'React', 'Flask', 'Chart.js', 'Tailwind CSS', 'HTML/CSS', 'Git', 'SQL'].map((skill) => (
 							<span class="px-4 py-2 rounded-full text-sm font-medium bg-purple-100 dark:bg-purple-900/40 text-purple-800 dark:text-purple-100 border border-purple-200 dark:border-purple-800 hover:scale-105 transition-transform">
 								{skill}
 							</span>
@@ -194,7 +196,7 @@ const projects: Project[] = [
 					</div>
 				</div>
 				<p class="text-lg text-gray-700 dark:text-gray-50 leading-relaxed">
-					When I'm not coding, I enjoy exploring new technologies, contributing to open-source projects, and staying up-to-date with the latest industry trends.
+					When I'm not coding, I enjoy exploring new technologies, building data visualization tools, and creating efficient solutions to real-world problems.
 				</p>
 			</div>
 		</section>
