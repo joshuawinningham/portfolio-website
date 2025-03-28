@@ -31,15 +31,16 @@ const ogImage = "/images/og-image.png";
 const projects: Project[] = [
 	{
 		title: "Miles & Steps Tracker",
-		description: "A modern web application for tracking daily walking/running activities. Features include miles tracking, automatic steps calculation, calorie monitoring, and weight tracking. Built with Astro, TypeScript, and Chart.js for interactive data visualization.",
+		description: "A modern web application for tracking daily walking/running activities. Features include miles tracking, automatic steps calculation, calorie monitoring, weight tracking, and cross-device synchronization. Built with Astro, TypeScript, Chart.js, and Firebase for real-time data sync.",
 		image: "/images/projects/project4.png",
 		fallbackImage: "https://via.placeholder.com/800x600/1a1a1a/ffffff?text=Miles+Steps+Tracker",
-		technologies: ["Astro", "TypeScript", "Chart.js", "Tailwind CSS"],
+		technologies: ["Astro", "TypeScript", "Chart.js", "Tailwind CSS", "Firebase"],
 		techColors: {
 			Astro: { bg: "bg-purple-100 dark:bg-purple-900", text: "text-purple-800 dark:text-purple-200" },
 			TypeScript: { bg: "bg-blue-100 dark:bg-blue-900", text: "text-blue-800 dark:text-blue-200" },
 			"Chart.js": { bg: "bg-green-100 dark:bg-green-900", text: "text-green-800 dark:text-green-200" },
-			"Tailwind CSS": { bg: "bg-teal-100 dark:bg-teal-900", text: "text-teal-800 dark:text-teal-200" }
+			"Tailwind CSS": { bg: "bg-teal-100 dark:bg-teal-900", text: "text-teal-800 dark:text-teal-200" },
+			Firebase: { bg: "bg-orange-100 dark:bg-orange-900", text: "text-orange-800 dark:text-orange-200" }
 		},
 		links: {
 			github: "https://github.com/joshuawinningham/miles-steps-tracker",
